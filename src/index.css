@@ -31,6 +31,12 @@ body {
   color: var(--color-light--2);
   font-weight: 400;
   line-height: 1.6;
+
+  min-height: 100vh;
+  /* display: grid; */
+  /* place-content: center; */
+  /* place element in the center horizontally 
+    and vertically */
 }
 
 label {
