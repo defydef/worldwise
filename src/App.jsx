@@ -26,7 +26,6 @@ function App() {
         const data = await res.json();
         if (data.Response === "False") throw new Error();
         setCities(data);
-        console.log(data);
       } catch {
         alert("There was an error loading data");
       } finally {
