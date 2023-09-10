@@ -23,10 +23,7 @@ function Map() {
     getPosition,
   } = useGeolocation();
 
-  const { lat, lng } = useUrlPosition();
-
-  const mapLat = lat; // get the query param "lat"
-  const mapLng = lng; // get the query param "lat"
+  const [mapLat, mapLng] = useUrlPosition();
 
   useEffect(
     function () {
