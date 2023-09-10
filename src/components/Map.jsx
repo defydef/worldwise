@@ -12,19 +12,21 @@ import { useEffect, useState } from "react";
 import { useCities } from "../context/CityContext";
 import { useGeolocation } from "../hooks/useGeolocation";
 import Button from "./Button";
+import { useUrlPosition } from "../hooks/useUrlPosition";
 
 function Map() {
   const [mapPosition, setMapPosition] = useState([40, 0]);
   const { cities } = useCities();
-  const [searchParams, setSearchParams] = useSearchParams(); // get the current url
   const {
     isLoading: isLoadingPosition,
     position: geolocationPosition,
     getPosition,
   } = useGeolocation();
 
-  const mapLat = searchParams.get("lat"); // get the query param "lat"
-  const mapLng = searchParams.get("lng"); // get the query param "lat"
+  const { lat, lng } = useUrlPosition();
+
+  const mapLat = lat; // get the query param "lat"
+  const mapLng = lng; // get the query param "lat"
 
   useEffect(
     function () {
@@ -40,8 +42,6 @@ function Map() {
     },
     [geolocationPosition]
   );
-
-  console.log(geolocationPosition);
 
   async function handleClick() {
     getPosition();

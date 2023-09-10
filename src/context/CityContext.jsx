@@ -48,6 +48,10 @@ function CityProvider({ children }) {
     }
   }
 
+  function deleteCity(id) {
+    setCities(() => cities.filter((city) => city.id !== id));
+  }
+
   // 2. Provide value to child components
   return (
     <CityContext.Provider
@@ -56,6 +60,7 @@ function CityProvider({ children }) {
         isLoading,
         getCurrentCity,
         currentCity,
+        deleteCity,
       }}
     >
       {children}
