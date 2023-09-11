@@ -8,6 +8,9 @@ import Message from "./Message";
 import Spinner from "./Spinner";
 import { useNavigate } from "react-router-dom";
 import { useUrlPosition } from "../hooks/useUrlPosition";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
@@ -70,13 +73,17 @@ function Form() {
     [lat, lng, emoji]
   );
 
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   if (!lat && !lng)
     return <Message message="Start by clicking somewhere on the map" />;
   if (geoCodingError) return <Message message={geoCodingError} />;
   if (isLoadingGeoCoding) return <Spinner />;
 
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
@@ -89,10 +96,16 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        <input
+        {/* <input
           id="date"
           onChange={(e) => setDate(e.target.value)}
           value={date}
+        /> */}
+        <DatePicker
+          id="date"
+          onChange={(date) => setDate(date)}
+          selected={date}
+          dateFormat="dd/MM/yyyy"
         />
       </div>
 
