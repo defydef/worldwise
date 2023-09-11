@@ -11,6 +11,7 @@ import { useUrlPosition } from "../hooks/useUrlPosition";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
+import { useCities } from "../context/CityContext";
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
@@ -34,6 +35,7 @@ function Form() {
 
   const [lat, lng] = useUrlPosition();
   const [emoji, setEmoji] = useState("");
+  const { createCity } = useCities();
 
   useEffect(
     function () {
@@ -75,6 +77,18 @@ function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (!cityName || !date) return;
+
+    const newCity = {
+      cityName,
+      country,
+      emoji,
+      date,
+      notes,
+      position: { lat, lng },
+    };
+    createCity(newCity);
+    navigate("/app");
   }
 
   if (!lat && !lng)
@@ -96,11 +110,6 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        {/* <input
-          id="date"
-          onChange={(e) => setDate(e.target.value)}
-          value={date}
-        /> */}
         <DatePicker
           id="date"
           onChange={(date) => setDate(date)}
