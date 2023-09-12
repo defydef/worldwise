@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./CityItem.module.css";
 import { useCities } from "../context/CityContext";
 
@@ -13,9 +13,12 @@ function CityItem({ city, onDeleteCity }) {
   const { cityName, emoji, date, id, position } = city;
   const { currentCity, deleteCity } = useCities();
 
-  function handleClick(e) {
+  const navigate = useNavigate();
+
+  async function handleClick(e) {
     e.preventDefault();
-    deleteCity(id);
+    await deleteCity(id);
+    navigate("/app/cities");
   }
 
   return (
