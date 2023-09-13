@@ -10,6 +10,7 @@ function CityProvider({ children }) {
     cities: [],
     isLoading: false,
     currentCity: {},
+    error: "",
   };
 
   function reducer(state, action) {
@@ -40,6 +41,8 @@ function CityProvider({ children }) {
         };
       case "loading":
         return { ...state, isLoading: true };
+      case "rejected":
+        return { ...state, isLoading: false, error: action.payload };
       default:
         throw new Error("action type is not defined");
     }
@@ -66,7 +69,10 @@ function CityProvider({ children }) {
           payload: data,
         });
       } catch {
-        alert("There was an error loading list of cities data");
+        dispatch({
+          type: "rejected",
+          payload: "There was an error loading list of cities data",
+        });
       }
     }
     fetchCities();
@@ -90,7 +96,10 @@ function CityProvider({ children }) {
         payload: data,
       });
     } catch {
-      alert("There was an error loading currentCity data");
+      dispatch({
+        type: "rejected",
+        payload: "There was an error loading data",
+      });
     }
   }
 
@@ -109,7 +118,10 @@ function CityProvider({ children }) {
       const data = await res.json();
       dispatch({ type: "cities/created", payload: data });
     } catch {
-      alert("There was an error creating new city");
+      dispatch({
+        type: "rejected",
+        payload: "There was an error creating new city",
+      });
     }
   }
 
@@ -123,7 +135,10 @@ function CityProvider({ children }) {
       });
       dispatch({ type: "cities/deleted", payload: id });
     } catch {
-      alert("There was an error deleting city");
+      dispatch({
+        type: "rejected",
+        payload: "There was an error deleting city",
+      });
     }
   }
 
