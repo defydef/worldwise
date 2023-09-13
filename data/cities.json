@@ -59,6 +59,66 @@
         "lng": "1.0107421875000002"
       },
       "id": 7
+    },
+    {
+      "cityName": "Zamost’ye",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-09-13T00:34:02.432Z",
+      "notes": "",
+      "position": {
+        "lat": "51.23440735163461",
+        "lng": "35.33203125000001"
+      },
+      "id": 8
+    },
+    {
+      "cityName": "Dal’neye Konstantinovo",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-09-13T00:34:34.499Z",
+      "notes": "",
+      "position": {
+        "lat": "55.727110085045986",
+        "lng": "44.29687500000001"
+      },
+      "id": 9
+    },
+    {
+      "cityName": "Herbignac",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-09-13T00:37:57.890Z",
+      "notes": "good",
+      "position": {
+        "lat": "47.45780853075031",
+        "lng": "-2.3730468750000004"
+      },
+      "id": 10
+    },
+    {
+      "cityName": "Eberstein",
+      "country": "Austria",
+      "emoji": "🇦🇹",
+      "date": "2023-09-13T00:38:57.170Z",
+      "notes": "",
+      "position": {
+        "lat": "46.76996843356982",
+        "lng": "14.5458984375"
+      },
+      "id": 11
+    },
+    {
+      "cityName": "Le Rousset-Marizy",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-09-13T00:39:25.368Z",
+      "notes": "",
+      "position": {
+        "lat": "46.55886030311719",
+        "lng": "4.394531250000001"
+      },
+      "id": 12
     }
   ]
 }
