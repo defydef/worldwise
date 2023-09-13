@@ -17,8 +17,7 @@ function CityItem({ city, onDeleteCity }) {
 
   async function handleClick(e) {
     e.preventDefault();
-    await deleteCity(id);
-    navigate("/app/cities");
+    deleteCity(id);
   }
 
   return (

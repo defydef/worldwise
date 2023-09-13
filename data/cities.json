@@ -1,52 +1,64 @@
 {
   "cities": [
     {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "cityName": "Bartosovice",
+      "country": "Czechia",
+      "emoji": "🇨🇿",
+      "date": "2023-09-12T00:56:17.782Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "49.66762782262194",
+        "lng": "18.061523437500004"
       },
-      "id": 17806751
+      "id": 1
     },
     {
-      "cityName": "Hassi Gara",
-      "country": "Algeria",
-      "emoji": "🇩🇿",
-      "date": "2023-09-11T14:19:31.459Z",
+      "cityName": "Volos",
+      "country": "Greece",
+      "emoji": "🇬🇷",
+      "date": "2023-09-12T00:57:59.580Z",
       "notes": "",
       "position": {
-        "lat": "29.22889003019423",
-        "lng": "3.0322265625000004"
+        "lat": "39.26628442213066",
+        "lng": "22.719726562500004"
       },
-      "id": 98443198
+      "id": 4
     },
     {
-      "cityName": "Sabac",
-      "country": "Serbia",
-      "emoji": "🇷🇸",
-      "date": "2023-09-12T00:53:40.482Z",
+      "cityName": "Tabanan",
+      "country": "Indonesia",
+      "emoji": "🇮🇩",
+      "date": "2023-09-12T00:58:17.814Z",
+      "notes": "",
+      "position": {
+        "lat": "-8.556577901998288",
+        "lng": "115.11474609375"
+      },
+      "id": 5
+    },
+    {
+      "cityName": "Tegalalang",
+      "country": "Indonesia",
+      "emoji": "🇮🇩",
+      "date": "2023-09-12T00:58:25.748Z",
+      "notes": "",
+      "position": {
+        "lat": "-8.390865416667355",
+        "lng": "115.30151367187501"
+      },
+      "id": 6
+    },
+    {
+      "cityName": "Saint-Paul-d'Espis",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-09-13T00:21:02.425Z",
       "notes": "good",
       "position": {
-        "lat": "44.68427737181225",
-        "lng": "19.555664062500004"
+        "lat": "44.11914151643737",
+        "lng": "1.0107421875000002"
       },
-      "id": 98443201
-    },
-    {
-      "cityName": "Ankara",
-      "country": "Turkiye",
-      "emoji": "🇹🇷",
-      "date": "2023-09-12T00:53:55.047Z",
-      "notes": "",
-      "position": {
-        "lat": "39.50404070558415",
-        "lng": "33.22265625000001"
-      },
-      "id": 98443202
+      "id": 7
     }
   ]
 }
