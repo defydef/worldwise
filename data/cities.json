@@ -13,18 +13,6 @@
       "id": 1
     },
     {
-      "cityName": "Volos",
-      "country": "Greece",
-      "emoji": "🇬🇷",
-      "date": "2023-09-12T00:57:59.580Z",
-      "notes": "",
-      "position": {
-        "lat": "39.26628442213066",
-        "lng": "22.719726562500004"
-      },
-      "id": 4
-    },
-    {
       "cityName": "Tabanan",
       "country": "Indonesia",
       "emoji": "🇮🇩",
@@ -47,18 +35,6 @@
         "lng": "115.30151367187501"
       },
       "id": 6
-    },
-    {
-      "cityName": "Saint-Paul-d'Espis",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2023-09-13T00:21:02.425Z",
-      "notes": "good",
-      "position": {
-        "lat": "44.11914151643737",
-        "lng": "1.0107421875000002"
-      },
-      "id": 7
     },
     {
       "cityName": "Zamost’ye",
