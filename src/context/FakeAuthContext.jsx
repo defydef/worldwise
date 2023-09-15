@@ -24,7 +24,7 @@ function reducer(state, action) {
 const AuthContext = createContext();
 
 // 2) Provide context values to children components
-function AuthProvider({ children }) {
+function FakeAuthProvider({ children }) {
   const [{ user, isAuthenticated }, dispatch] = useReducer(
     reducer,
     initialState
@@ -56,4 +56,4 @@ function useAuth() {
   return context;
 }
 
-export { AuthProvider, useAuth };
+export { FakeAuthProvider, useAuth };
