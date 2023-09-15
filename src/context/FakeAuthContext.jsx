@@ -32,7 +32,15 @@ function FakeAuthProvider({ children }) {
 
   function login(email, password) {
     if (email === FAKE_USER.email && password === FAKE_USER.password)
-      dispatch({ type: "login", payload: { email, password } });
+      dispatch({
+        type: "login",
+        payload: {
+          email,
+          password,
+          name: FAKE_USER.name,
+          avatar: FAKE_USER.avatar,
+        },
+      });
     else throw new Error("Incorrect email or password");
   }
 
