@@ -3,6 +3,7 @@ import styles from "./Login.module.css";
 import PageNav from "../components/PageNav";
 import { useAuth } from "../context/FakeAuthContext";
 import { useNavigate } from "react-router-dom";
+import Button from "../components/Button";
 
 export default function Login() {
   // PRE-FILL FOR DEV PURPOSES
@@ -49,7 +50,9 @@ export default function Login() {
         </div>
 
         <div>
-          <button onClick={(e) => handleLogin(e)}>Login</button>
+          <Button type="primary" onClick={(e) => handleLogin(e)}>
+            Login
+          </Button>
         </div>
       </form>
     </main>
