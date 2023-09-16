@@ -3,7 +3,7 @@ import { useAuth } from "../context/FakeAuthContext";
 import { useNavigate } from "react-router-dom";
 
 function User() {
-  const { user, logout } = useAuth();
+  const { user, logout, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   function handleClick(e) {
@@ -13,11 +13,13 @@ function User() {
   }
 
   return (
-    <div className={styles.user}>
-      <img src={user.avatar} alt={user.name} />
-      <span>Welcome, {user.name}</span>
-      <button onClick={(e) => handleClick(e)}>Logout</button>
-    </div>
+    isAuthenticated && (
+      <div className={styles.user}>
+        <img src={user.avatar} alt={user.name} />
+        <span>Welcome, {user.name}</span>
+        <button onClick={(e) => handleClick(e)}>Logout</button>
+      </div>
+    )
   );
 }
 
