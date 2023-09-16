@@ -6,7 +6,7 @@ function User() {
   const { user, logout, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
-  function handleClick(e) {
+  function handleLogout(e) {
     e.preventDefault();
     logout();
     navigate("/");
@@ -17,7 +17,7 @@ function User() {
       <div className={styles.user}>
         <img src={user.avatar} alt={user.name} />
         <span>Welcome, {user.name}</span>
-        <button onClick={(e) => handleClick(e)}>Logout</button>
+        <button onClick={(e) => handleLogout(e)}>Logout</button>
       </div>
     )
   );

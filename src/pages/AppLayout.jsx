@@ -2,10 +2,13 @@ import Sidebar from "../components/Sidebar";
 import styles from "./AppLayout.module.css";
 import Map from "../components/Map";
 import { CityProvider } from "../context/CityContext";
+import { useAuth } from "../context/FakeAuthContext";
 import User from "../components/User";
+import Login from "./Login";
 
 function AppLayout() {
-  return (
+  const { isAuthenticated } = useAuth();
+  return isAuthenticated ? (
     <CityProvider>
       <div className={styles.app}>
         <User />
@@ -13,6 +16,8 @@ function AppLayout() {
         <Map />
       </div>
     </CityProvider>
+  ) : (
+    <Login />
   );
 }
 

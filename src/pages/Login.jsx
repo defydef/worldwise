@@ -20,8 +20,8 @@ export default function Login() {
 
   useEffect(
     function () {
-      if (isAuthenticated) navigate("/app");
-    },
+      if (isAuthenticated) navigate("/app", { replace: true });
+    }, // replace: true means that the user does not go back to Login page, but goes back to Homepage
     [isAuthenticated, navigate]
   );
 
