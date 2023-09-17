@@ -3,10 +3,10 @@ import { createContext, useContext, useReducer } from "react";
 const initialState = { user: null, isAuthenticated: false };
 
 const FAKE_USER = {
-  name: "Jack",
-  email: "jack@example.com",
+  name: "Lisa",
+  email: "lisa@example.com",
   password: "qwerty",
-  avatar: "https://i.pravatar.cc/100?u=zz",
+  avatar: "https://i.pravatar.cc/80?img=44",
 };
 
 function reducer(state, action) {
